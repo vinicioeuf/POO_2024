@@ -10,14 +10,23 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        double[] medias = new double[5];
-        for(int i = 0;i < medias.length;i++){
-            System.out.print("Digite sua media: ");
-            medias[i] = s.nextInt();
+        int[] numeros = new int[10];
+        int cont = 0;
+
+        for(int i = 0; i < numeros.length; i++){
+            numeros[i] = i;
         }
-        for(double e : medias){ //Foreach
-            System.out.println("Média: " + e);
+        System.out.print("Saída de dados: ");
+        for(int i = 0; i < numeros.length; i++){
+            if(numeros[i] % 2 == 0){
+                cont++;
+                if(cont > 1){  // Verifica se não é o primeiro número par
+                    System.out.print(", ");  // Se não for, imprime a vírgula antes
+                }
+                System.out.print(numeros[i]);  // Imprime o número par
+            }
         }
+        System.out.println("\nTemos " + cont + " números pares");
         
 //        int[] numeros = new int[10];
 //        
