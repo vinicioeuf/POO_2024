@@ -17,8 +17,8 @@ public class main {
             numeros[i] = i;
         }
         System.out.print("Saída de dados: ");
-        for(int i = 0; i < numeros.length; i++){
-            if(numeros[i] % 2 == 0){
+        for(int i : numeros){
+            if(i % 2 == 0){
                 cont++;
                 if(cont > 1){  // Verifica se não é o primeiro número par
                     System.out.print(", ");  // Se não for, imprime a vírgula antes
